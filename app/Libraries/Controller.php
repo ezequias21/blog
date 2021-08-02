@@ -4,17 +4,17 @@
 Class Controller{
 
     public function model($model){
-        require_once "./app/Models/" . $model . ".php";
+        require_once "../app/Models/" . $model . ".php";
         return new $model;
     }
 
 
     public function view($view, $dados = [], $errors = []){
-        $file = "https://ranking-teste.herokuapp.com/blog/app/Views/" . $view . ".php";
+        $file = "../app/Views/" . $view . ".php";
         if(file_exists($file)){
             require_once $file;
         }else{
-            die(" $file - O arquivo da view não existe");
+            die("O arquivo da view não existe");
         }
     }
 }
