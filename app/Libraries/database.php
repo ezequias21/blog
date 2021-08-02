@@ -1,11 +1,19 @@
 <?php
 
-class Database {
+class Database
+{
+    
 
-    private $host = 'localhost';
+    private $cleardb_url = parse_url(getenv("CLEARDB_DATABASE_URL"));
+    private $host = $cleardb_url["host"];
+    private $usuario = $cleardb_url["user"];
+    private $senha = $cleardb_url["pass"];
+    private $banco = substr($cleardb_url["path"], 1);
+
+   /*  private $host = 'localhost';
     private $usuario = 'root';
     private $senha = '';
-    private $banco = 'blog';
+    private $banco = 'blog'; */
     private $porta = '3306';
     private $dbh;
     private $stmt;
@@ -13,7 +21,7 @@ class Database {
     public function __construct()
     {
         //fonte de dados ou DSN contém as informações necessárias para conectar ao banco de dados.
-        $dsn = 'mysql:host='.$this->host.';port='.$this->porta.';dbname='.$this->banco;
+        $dsn = 'mysql:host=' . $this->host . ';port=' . $this->porta . ';dbname=' . $this->banco;
         $opcoes = [
             //armazena em cache a conexão para ser reutilizada, evita a sobrecarga de uma nova conexão, 
             //resultando em um aplicativo mais rápido
@@ -31,26 +39,28 @@ class Database {
     }
 
     //Prepared Statements com query
-    public function query($sql){
+    public function query($sql)
+    {
         //prepara uma consulta sql
         $this->stmt = $this->dbh->prepare($sql);
     }
 
     //vincula um valor a um parâmetro
-    public function bind($parametro, $valor, $tipo = null){
-        if(is_null($tipo)):
+    public function bind($parametro, $valor, $tipo = null)
+    {
+        if (is_null($tipo)) :
             switch (true):
                 case is_int($valor):
                     $tipo = PDO::PARAM_INT;
-                break;
+                    break;
                 case is_bool($valor):
                     $tipo = PDO::PARAM_BOOL;
-                break;
+                    break;
                 case is_null($valor):
                     $tipo = PDO::PARAM_NULL;
-                break;
+                    break;
                 default:
-                $tipo = PDO::PARAM_STR;
+                    $tipo = PDO::PARAM_STR;
             endswitch;
         endif;
 
@@ -58,32 +68,34 @@ class Database {
     }
 
     //executa prepared statement
-    public function executa(){
+    public function executa()
+    {
         return $this->stmt->execute();
     }
 
     //obtem um único registro
-    public function resultado(){
+    public function resultado()
+    {
         $this->executa();
         return $this->stmt->fetch(PDO::FETCH_OBJ);
     }
 
     //obtem um conjunto de registros
-    public function resultados(){
+    public function resultados()
+    {
         $this->executa();
         return $this->stmt->fetchAll(PDO::FETCH_OBJ);
     }
 
     //retorna o número de linhas afetadas pela última instrução SQL
-    public function totalResultados(){
+    public function totalResultados()
+    {
         return $this->stmt->rowCount();
     }
 
     //retorna o último ID inserido no banco de dados
-    public function ultimoIdInserido(){
+    public function ultimoIdInserido()
+    {
         return $this->dbh->lastInsertId();
     }
-
 }
-
-
