@@ -5,10 +5,10 @@ class Database
     
 
     private $cleardb_url = parse_url(getenv("CLEARDB_DATABASE_URL"));
-    private $host = $cleardb_url["host"];
-    private $usuario = $cleardb_url["user"];
-    private $senha = $cleardb_url["pass"];
-    private $banco = substr($cleardb_url["path"], 1);
+    private $host = $this->cleardb_url["host"];
+    private $usuario = $this->$cleardb_url["user"];
+    private $senha = $this->$cleardb_url["pass"];
+    private $banco = substr($this->$cleardb_url["path"], 1);
 
    /*  private $host = 'localhost';
     private $usuario = 'root';
