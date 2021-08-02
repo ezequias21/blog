@@ -10,7 +10,7 @@ Class Controller{
 
 
     public function view($view, $dados = [], $errors = []){
-        $file = "https://ranking-teste.herokuapp.com/app/Views/" . $view . ".php";
+        $file = "https://ranking-teste.herokuapp.com/blog/app/Views/" . $view . ".php";
         if(file_exists($file)){
             require_once $file;
         }else{
