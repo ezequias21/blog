@@ -1,10 +1,10 @@
 <div class="ul container">
 
     <div class="ui large inverted menu">
-        <a href="../paginas/home" class="olive item active">Home</a>
+        <a href="./paginas/home" class="olive item active">Home</a>
         <a href="./paginas/colaboradores" class="olive item">Colaboradores</a>
-        <a href="../posts/postagens" class="olive item">Postagens</a>
-        <a href="../paginas/sobre" class="olive item">Sobre nós</a>
+        <a href="./posts/postagens" class="olive item">Postagens</a>
+        <a href="./paginas/sobre" class="olive item">Sobre nós</a>
 
         <div class="right menu">
             <div class="item">
