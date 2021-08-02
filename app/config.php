@@ -2,7 +2,7 @@
 
 define('APP', dirname(__FILE__));
 
-define('URL', 'https://ranking-teste.herokuapp.com/framework');
+define('URL', 'https://ranking-teste.herokuapp.com');
 
 define('APP_NAME', "Blog Pessoal");
 
