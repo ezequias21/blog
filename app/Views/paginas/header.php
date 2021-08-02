@@ -1,10 +1,10 @@
 <div class="ul container">
 
     <div class="ui large inverted menu">
-        <a href="<?= URL ?>/paginas/home" class="olive item active">Home</a>
-        <a href="<?= URL ?>/paginas/colaboradores" class="olive item">Colaboradores</a>
-        <a href="<?= URL ?>/posts/postagens" class="olive item">Postagens</a>
-        <a href="<?= URL ?>/paginas/sobre" class="olive item">Sobre nós</a>
+        <a href="../paginas/home" class="olive item active">Home</a>
+        <a href="./paginas/colaboradores" class="olive item">Colaboradores</a>
+        <a href="../posts/postagens" class="olive item">Postagens</a>
+        <a href="../paginas/sobre" class="olive item">Sobre nós</a>
 
         <div class="right menu">
             <div class="item">
@@ -16,16 +16,16 @@
                     </div>
 
                     <a class="ui image large label">
-                        <img src="<?= URL ?>/public/img/avatar1.png">
+                        <img src="../public/img/avatar1.png">
                        <?= $_SESSION["usuario_nome"]?>
                     </a>
 
-                    <a href="<?= URL ?>/usuarios/sair" class="ui basic label large">Sair</a>
+                    <a href="../usuarios/sair" class="ui basic label large">Sair</a>
                 <?php } else { ?>
 
 
-                    <button class="ui olive button" onclick="window.location.href = '<?= URL ?>/usuarios/cadastrar'" style="margin-right: 10px">Registre-se</button>
-                    <button class="ui olive button" onclick="window.location.href='<?= URL ?>/usuarios/login'">Conecte-se</button>
+                    <button class="ui olive button" onclick="window.location.href = '../usuarios/cadastrar'" style="margin-right: 10px">Registre-se</button>
+                    <button class="ui olive button" onclick="window.location.href='../usuarios/login'">Conecte-se</button>
                 <?php } ?>
             </div>
         </div>
