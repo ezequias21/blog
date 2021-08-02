@@ -12,7 +12,6 @@ Class Controller{
     public function view($view, $dados = [], $errors = []){
         $file = "../app/Views/" . $view . ".php";
         if(file_exists($file)){
-            die($file);
             require_once $file;
         }else{
             die("O arquivo da view não existe");
