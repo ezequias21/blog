@@ -3,17 +3,17 @@
 class Database
 {
     
-
+/* 
     private $cleardb_url = parse_url(getenv("CLEARDB_DATABASE_URL"));
     private $host = $this->cleardb_url["host"];
     private $usuario = $this->$cleardb_url["user"];
     private $senha = $this->$cleardb_url["pass"];
-    private $banco = substr($this->$cleardb_url["path"], 1);
+    private $banco = substr($this->$cleardb_url["path"], 1); */
 
-   /*  private $host = 'localhost';
-    private $usuario = 'root';
-    private $senha = '';
-    private $banco = 'blog'; */
+    private $host = 'eu-cdbr-west-01.cleardb.com';
+    private $usuario = 'bd7d77ba217424';
+    private $senha = '216b8032';
+    private $banco = 'blog';
     private $porta = '3306';
     private $dbh;
     private $stmt;
