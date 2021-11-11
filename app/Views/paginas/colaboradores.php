@@ -45,7 +45,7 @@
 
           <div class="column">
 
-            <div class="ui fluid card">
+            <div class="ui fluid card cursor-pointer">
               <a class="image" href="#">
                 <img src="../public/img/avatar2.png">
               </a>
@@ -56,7 +56,7 @@
           </div>
 
           <div class="column">
-            <div class="ui fluid card">
+            <div class="ui fluid card cursor-pointer">
               <div class="image">
                 <img src="../public/img/avatar1.png">
               </div>
@@ -66,7 +66,7 @@
             </div>
           </div>
           <div class="column">
-            <div class="ui fluid card">
+            <div class="ui fluid card cursor-pointer">
               <div class="image">
                 <img src="../public/img/avatar2.png">
               </div>
@@ -77,7 +77,7 @@
           </div>
 
           <div class="column">
-            <div class="ui fluid card">
+            <div class="ui fluid card cursor-pointer">
               <div class="image">
                 <img src="../public/img/avatar3.jpg">
               </div>
@@ -95,7 +95,7 @@
 
           <div class="column">
 
-            <div class="ui fluid card">
+            <div class="ui fluid card cursor-pointer">
               <a class="image" href="#">
                 <img src="../public/img/avatar2.png">
               </a>
@@ -106,7 +106,7 @@
           </div>
 
           <div class="column">
-            <div class="ui fluid card">
+            <div class="ui fluid card cursor-pointer">
               <div class="image">
                 <img src="../public/img/avatar1.png">
               </div>
@@ -116,19 +116,19 @@
             </div>
           </div>
           <div class="column">
-            <div class="ui fluid card">
+            <div class="ui fluid card cursor-pointer">
               <div class="image">
                 <img src="../public/img/avatar3.jpg">
               </div>
               <div class="content">
                 <a class="header">Elliot Fu</a>
               </div>
-          
+
             </div>
           </div>
 
           <div class="column">
-            <div class="ui fluid card">
+            <div class="ui fluid card cursor-pointer">
               <div class="image">
                 <img src="../public/img/avatar2.png">
               </div>
@@ -161,7 +161,7 @@
 
           <div class="column">
 
-            <div class="ui fluid card">
+            <div class="ui fluid card cursor-pointer">
               <a class="image" href="#">
                 <img src="../public/img/avatar2.png">
               </a>
@@ -176,7 +176,7 @@
           </div>
 
           <div class="column">
-            <div class="ui fluid card">
+            <div class="ui fluid card cursor-pointer">
               <div class="image">
                 <img src="../public/img/avatar1.png">
               </div>
@@ -190,7 +190,7 @@
             </div>
           </div>
           <div class="column">
-            <div class="ui fluid card">
+            <div class="ui fluid card cursor-pointer">
               <div class="image">
                 <img src="../public/img/avatar3.jpg">
               </div>
@@ -205,7 +205,7 @@
           </div>
 
           <div class="column">
-            <div class="ui fluid card">
+            <div class="ui fluid card cursor-pointer">
               <div class="image">
                 <img src="../public/img/avatar2.png">
               </div>
@@ -232,12 +232,26 @@
 
 
     <div class="five wide column">
+
+
+    
+
+
+
+
+    
+
+
       <div class="ui center aligned basic segment">
         <div class="ui horizontal divider header">
         </div>
       </div>
 
-      <div id="grudar"class="ui link cards" style="display: flex; justify-content: center">
+      <div id="grudar" class="ui link cards" style="display: flex; justify-content: center; position: sticky; top: 0">
+
+
+
+
         <div class="ui raised card">
           <div class="image">
             <img src="../public/img/avatar1.png">
