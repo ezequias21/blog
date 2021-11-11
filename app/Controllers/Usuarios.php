@@ -48,7 +48,7 @@ class Usuarios extends Controller
                 }
             } else {
                 if ($this->usuarioModel->check_email_exist($form["email"])) {
-                    $errors["email_erro"] = "Esse e-mail já está cadastrado.";
+                    $errors["email_erro"] = "Esse e-mail já está sendo usado por outro usuário.";
                 } else if (strlen($form["password1"]) < 6) {
 
                     $errors["senha1_erro"] = "A senha tem que ter no mínimo 6 dígitos.";
